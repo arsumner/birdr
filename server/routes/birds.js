@@ -1,30 +1,21 @@
 const express = require('express')
-
+const Bird = require('../models/birdModel')
+const { createBird, getBird, getBirds, deleteBird, updateBird } = require('../controllers/birdController')
 const router = express.Router()
 
 // GET birds
-router.get('/', (req, res) => {
-    res.json({msg: 'GET all birds'})
-})
+router.get('/', getBirds)
 
 // GET single bird
-router.get('/:id', (req, res) => {
-    res.json({msg: 'GET single bird'})
-})
+router.get('/:id', getBird)
 
 // POST a bird
-router.post('/', (req, res) => {
-    res.json({msg: 'POST new bird'})
-})
+router.post('/', createBird)
 
 // DELETE a bird
-router.delete('/:id', (req, res) => {
-    res.json({msg: 'DELETE bird'})
-})
+router.delete('/:id', deleteBird)
 
 // UPDATE bird
-router.patch('/:id', (req, res) => {
-    res.json({msg: 'UPDATE bird'})
-})
+router.patch('/:id', updateBird)
 
 module.exports = router
