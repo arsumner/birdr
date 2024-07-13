@@ -1,5 +1,9 @@
 import { useState, useEffect} from 'react'
 
+// components
+import BirdDetails from '../components/birdDetails'
+import BirdForm from '../components/birdForm'
+
 const Home = () => {
     const [birds, setBirds] = useState(null)
 
@@ -20,10 +24,11 @@ const Home = () => {
         <div className= "home">
             <div className="birds">
                 {birds && birds.map((bird) => (
-                    <p key={birds._id}>{bird.name}</p>
+                    <BirdDetails key={bird._id} bird={bird}/>
                 ))
                 }
             </div>
+            <BirdForm/>
         </div>
     )
 }
