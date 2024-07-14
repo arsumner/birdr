@@ -1,6 +1,7 @@
 const Bird = require('../models/birdModel')
 const mongoose = require('mongoose')
 
+
 // GET all birds
 const getBirds = async (req, res) => {
     const birds = await Bird.find({}).sort({createdAt: -1})
@@ -29,6 +30,21 @@ const getBird = async (req, res) => {
 const createBird = async (req, res) => {
 
     const {name, location, count, notes} = req.body
+
+    let emptyFields = []
+
+    if(!name) {
+        emptyFields.push('name')
+    }
+    if(!location) {
+        emptyFields.push('location')
+    }
+    if(!count) {
+        emptyFields.push('count')
+    }
+    if(emptyFields.length > 0) {
+        return res.status(400).json({ error: 'Please complete the outlined fields.', emptyFields})
+    }
 
     // Add bird to DB
     try {
