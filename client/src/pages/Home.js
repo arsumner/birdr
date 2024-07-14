@@ -1,11 +1,12 @@
-import { useState, useEffect} from 'react'
+import { useEffect} from 'react'
+import { useBirdsContext } from '../hooks/useBirdsContext'
 
 // components
 import BirdDetails from '../components/birdDetails'
 import BirdForm from '../components/birdForm'
 
 const Home = () => {
-    const [birds, setBirds] = useState(null)
+    const {birds, dispatch} = useBirdsContext()
 
     useEffect(() => {
         const fetchBirds = async () => {
@@ -13,7 +14,7 @@ const Home = () => {
             const json = await response.json()
 
             if (response.ok) {
-                setBirds(json)
+                dispatch({type:'SET_BIRDS', payload: json})
             }
         }
 
