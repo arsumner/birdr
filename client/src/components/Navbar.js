@@ -7,6 +7,9 @@ const Navbar = () => {
                 <Link to="/">
                     <h1>Birdr</h1>
                 </Link>
+                <Link to="/library">
+                    <h1>Library</h1>
+                </Link>
 
             </div>
         </header>
