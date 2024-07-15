@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
+const validator = require('validator')
 
 const Schema = mongoose.Schema
 
@@ -16,7 +17,19 @@ const userSchema = new Schema({
 })
 
 // static signup method
-userSchema.statics.signup = async (email, password) => {
+userSchema.statics.signup = async function (email, password) {
+
+    // validation logic
+    if (!email || !password) {
+        throw Error('Please fill in both fields.')
+    }
+    if (!validator.isEmail(email)) {
+        throw Error('This is not a valid email.')
+    }
+    if (!validator.isStrongPassword(password)) {
+        throw Error('This password is not strong enough.')
+    }
+
     const exists = await this.findOne({ email })
 
     if(exists) {
