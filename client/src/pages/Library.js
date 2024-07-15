@@ -22,7 +22,7 @@ const Library = () => {
     }, [])
 
     return (
-        <div className= "home">
+        <div className= "library">
             <div className="birds">
                 {birds && birds.map((bird) => (
                     <BirdDetails key={bird._id} bird={bird}/>
