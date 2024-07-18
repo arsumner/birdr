@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Library from './pages/Library'
 import Navbar from './components/Navbar';
 import UpdateBirdForm from './components/updateBirdForm';
+import Signup from './pages/Signup'
+import Login from './pages/Login'
 
 function App() {
   return (
@@ -24,6 +26,14 @@ function App() {
             <Route 
               path="/update/:id" 
               element={<UpdateBirdForm />} 
+            />
+            <Route 
+              path = "/login"
+              element = {<Login />}
+            />
+            <Route 
+              path = "/signup"
+              element = {<Signup />}
             />
           </Routes>
         </div>
