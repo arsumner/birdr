@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { useBirdsContext } from '../hooks/useBirdsContext'
+import { useAuthContext } from "../hooks/useAuthContext"
 
 const BirdForm = () => {
     const { dispatch } = useBirdsContext()
+    const { user } = useAuthContext()
     const [name, setName] = useState('')
     const [location, setLocation] = useState('')
     const [count, setCount] = useState('')
@@ -13,13 +15,20 @@ const BirdForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
+        // check if there is a user logged in
+        if (!user) {
+            setError('You must be logged in.')
+            return
+        }
+
         const bird = {name, location, count, notes}
 
         const response = await fetch('/api/birds', {
             method: 'POST',
             body: JSON.stringify(bird),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
             }
         })
 

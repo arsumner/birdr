@@ -1,15 +1,23 @@
 import { useBirdsContext } from "../hooks/useBirdsContext"
 import { useNavigate } from 'react-router-dom'
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import { useAuthContext } from "../hooks/useAuthContext"
 
 const BirdDetails = ({bird}) => {
 
     const { dispatch } = useBirdsContext()
     const navigate = useNavigate()
+    const { user } = useAuthContext()
 
     const handleDeleteClick = async () => {
+        if (!user) {
+            return
+        }
         const response = await fetch('/api/birds/' + bird._id, {
-            method: "DELETE"
+            method: "DELETE",
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            }
         })
         const json = await response.json()
 
@@ -19,6 +27,9 @@ const BirdDetails = ({bird}) => {
     }
 
     const handleUpdateClick = async () => {
+        if (!user) {
+            return
+        }
         navigate(`/update/${bird._id}`)
     }
     
