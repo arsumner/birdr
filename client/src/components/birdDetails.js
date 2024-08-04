@@ -41,8 +41,10 @@ const BirdDetails = ({bird}) => {
             <p>Number of birds seen: {bird.count}</p>
             <p>Notes: {bird.notes}</p>
             <p>{'Entry added: ' + formatDistanceToNow(new Date(bird.createdAt), { addSuffix: true})}</p>
+            <div className="bird-actions">
             <button onClick={handleDeleteClick}>delete</button>
             <button onClick={handleUpdateClick}>update</button>
+            </div>
         </div>
     )
 }
