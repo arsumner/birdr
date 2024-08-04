@@ -3,38 +3,125 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #62824b;
+    background-color: rgb(216, 210, 210)
 }
 
-/* Navbar Styling */
+/* Home Page */
+
+.home {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-text {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white
+}
+
+.cta-container {
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #020507;
+    border: 1px solid #f8f8f8;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.large-image {
+    width: 100%;
+    height: auto;
+    border-radius:  5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+/* Navbar */
+
 header {
-    background-color: #010901;
-    padding: 30px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: url('images/nav.jpg');
+    padding: 30px;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+.navbar-logo {
+    display: flex;
+    max-width:120px;
+}
+
 header h1 {
     margin: 0;
-    color: white;
+    color: rgb(5, 5, 5);
 }
 
 header a {
     text-decoration: none;
-    color: white;
+    color: rgb(2, 2, 2);
     font-size: 1.5em;
 }
 
-/* Home Component Styling */
-.home {
+.auth-links a:hover {
+    background-color: black;
+    color: white;
+}
+
+.auth-links button {
+    background: white; 
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Library Page */
+
+.library {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,154 +134,315 @@ header a {
     gap: 20px;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.bird-details {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    margin-top: 50px;
 }
 
 .bird-details:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.bird-details {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #fdfd96;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
 
-/* add bird form */
+.bird-details h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.bird-details p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.bird-details .bird-actions {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.bird-details .bird-actions button {
+    padding: 10px 15px;
+    background-color: #020202;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.bird-details .bird-actions button:hover {
+    background-color: #393a3b;
+}
+
+/* Create Bird Form*/
 
 .create-bird-form {
-    max-width: 6000px;
-    margin: 0 auto;
-    padding: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #080707;
+    border-radius: 15px;
+    background-color: #efefef;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Arial', sans-serif;
 }
 
 .create-bird-form h3 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-size: 2rem;
+    color: #333;
+    text-align: left;
 }
 
 .create-bird-form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #1b05c5;
 }
 
-.create-bird-form .form-input,
-.create-bird-form .form-textarea {
+.create-bird-form input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-
-
-
-.create-bird-form .notes-update-box {
-
-    border: 3px solid #000;
-    border-radius: 5px;
-    height: 50px;
-    line-height: normal;
-    color: #282828;
-    display: block;
-    width: 100%;
+    border-radius: 10px;
+    font-size: 1.2rem;
     box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0 6px;
-    padding-left: 12px;
-    :focus{
-        border: 3px solid #5551ff;
-    }
-    
 }
 
-.create-bird-form.form-button {
-    background-color: #007bff;
-    color: #fff;
+.create-bird-form button {
+    width: 50%;
+    padding: 15px;
+    background-color: #020202;
+    color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 1.2rem;
     cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
 }
 
-.create-bird-form .form-button:hover {
-    background-color: #0056b3;
+.create-bird-form button:hover {
+    background-color: #393a3b;
 }
+
+.create-bird-form .error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
 
 /* update form */
 
 .update-form {
-    max-width: 6000px;
-    margin: 0 auto;
-    padding: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    max-width: 500px;
+    margin: 150px auto 20px;
+    padding: 20px;
+    border: 1px solid #090101;
+    border-radius: 10px;
+    background-color: #fdfd96; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    transform: rotate(1deg); 
 }
 
+
 .update-form h3 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
 }
 
 .update-form label {
     display: block;
     margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
 }
 
-.update-form .form-input,
-.update-form .form-textarea {
+.update-form input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
-
-
-
 
 .update-form .notes-update-box {
-
-    border: 3px solid #000;
-    border-radius: 5px;
-    height: 50px;
-    line-height: normal;
-    color: #282828;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0 6px;
-    padding-left: 12px;
-    :focus{
-        border: 3px solid #5551ff;
-    }
-    
+    height: 100px;
 }
 
-.update-form .form-button {
+.update-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #020202;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-form button:hover {
+    background-color: #393a3b;
+}
+
+.update-form .error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Login Form */
+
+.background-container {
+    background: ('client/public/images/birdsky.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-form-labels {
+    text-align: left;
+}
+
+.login h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.auth-links a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 20px;
+}
+
+.auth-links a:hover {
+    background-color: black;
+    color: white;
+}
+
+.authenticated {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.authenticated span {
+    margin-right: 10px;
+    color: black;
+
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+.authenticated button {
+    background: white;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.authenticated button:hover {
+    background-color: black;
+    color: white;
+}
+.login-link {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login button {
+    width: 100%;
+    padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.update-form .form-button:hover {
-    background-color: #0056b3;
+.login button:hover {
+    background-color: #000000;
 }
 
-.create .error {
-    border-color: red;
+.login .error {
+    color: red;
+    margin-top: 10px;
 }
