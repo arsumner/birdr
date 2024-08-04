@@ -4,7 +4,8 @@ const mongoose = require('mongoose')
 
 // GET all birds
 const getBirds = async (req, res) => {
-    const birds = await Bird.find({}).sort({createdAt: -1})
+    const user_id = req.user._id
+    const birds = await Bird.find({ user_id }).sort({createdAt: -1})
 
     res.status(200).json(birds)
 }
@@ -48,7 +49,8 @@ const createBird = async (req, res) => {
 
     // Add bird to DB
     try {
-        const bird = await Bird.create({name, location, count, notes})
+        const user_id = req.user._id
+        const bird = await Bird.create({name, location, count, notes, user_id})
         res.status(200).json(bird)
     } catch (error) {
         res.status(400).json({error: error.message})

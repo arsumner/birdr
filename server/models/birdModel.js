@@ -17,6 +17,10 @@ const birdSchema = new Schema({
     },
     notes: {
         type: String
+    },
+    user_id: {
+        type: String,
+        required: true
     }
 }, {timestamps: true})
 
