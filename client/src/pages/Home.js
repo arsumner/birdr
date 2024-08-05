@@ -1,45 +1,33 @@
-import { useEffect} from 'react'
-import { useBirdsContext } from '../hooks/useBirdsContext'
-import { useAuthContext } from '../hooks/useAuthContext'
-
-// components
-import BirdDetails from '../components/birdDetails'
-import BirdForm from '../components/birdForm'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import note from '../images/note.png'; // Adjust the path as needed
 
 const Home = () => {
-    const {birds, dispatch} = useBirdsContext()
-    const {user} = useAuthContext()
-
-    useEffect(() => {
-        const fetchBirds = async () => {
-            const response = await fetch('api/birds', {
-                headers: {
-                    'Authorization': `Bearer ${user.token}`
-                }
-            })
-            const json = await response.json()
-
-            if (response.ok) {
-                dispatch({type:'SET_BIRDS', payload: json})
-            }
-        }
-
-        if (user) {
-            fetchBirds()
-        }
-    }, [dispatch, user])
-
     return (
-        <div className= "home">
-            <div className="birds">
-                {birds && birds.map((bird) => (
-                    <BirdDetails key={bird._id} bird={bird}/>
-                ))
-                }
+        <div className="home">
+            <div className="hero">
+                <div>
+                    <h1>Welcome to your Birdr account!</h1>
+                    <p>Add and update your bird log in the library.</p>
+                </div>
             </div>
-            <BirdForm/>
-        </div>
-    )
-}
 
-export default Home
+            <div className="image-container">
+                <div className="image-wrapper">
+                    <img
+                        src={note}
+                        alt="Bird Image 1"
+                        className="large-image"
+                    />
+                    <div className="overlay">
+                        <p className="welcome-text">Welcome</p>
+                        <Link to="/library" className="cta-button">Go to your Bird Library</Link>
+                    </div>
+                </div>
+            </div>
+            <p className="image-description">This is a description or additional information about the first bird.</p>
+        </div>
+    );
+};
+
+export default Home;
