@@ -67,7 +67,7 @@ const UpdateBirdForm = () => {
                 setError(json.error)
             } else {
                 dispatch({ type: 'UPDATE_BIRD', payload: json })
-                navigate('/')
+                navigate('/library')
             }
         } catch (err) {
             console.error('Failed to update bird details:', err)
@@ -77,15 +77,15 @@ const UpdateBirdForm = () => {
 
     return (
         <form className="update-form" onSubmit={handleSubmit}>
-            <h3>Update Bird Count</h3>
+            <h3>UPDATE YOUR BIRD DETAILS</h3>
+            <h4>Add to your bird count or change your field notes here.</h4>
             <label>Number of birds seen:</label>
             <input
                 type="number"
                 onChange={(e) => setCount(e.target.value)}
                 value={count}
             />
-            <h3>Add Notes</h3>
-            <label>Notes:</label>
+            <label>Field Notes:</label>
             <input className="notes-update-box"
                 type="text"
                 onChange={(e) => setNotes(e.target.value)}
