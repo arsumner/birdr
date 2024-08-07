@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import UpdateBirdForm from './components/updateBirdForm';
 import Signup from './pages/Signup'
 import Login from './pages/Login'
+import BirdSearch from './pages/BirdSearch'
+import Footer from './components/footer'
 
 function App() {
   const { user } = useAuthContext()
@@ -38,10 +40,14 @@ function App() {
               path = "/signup"
               element = {!user ?<Signup /> : <Navigate to='/' />}
             />
+            <Route 
+              path="/search" 
+              element={<BirdSearch />} 
+            />
           </Routes>
         </div>
+        <Footer/>
       </BrowserRouter>
-
     </div>
   );
 }
