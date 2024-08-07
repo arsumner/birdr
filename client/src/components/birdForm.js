@@ -52,7 +52,6 @@ const BirdForm = () => {
 
     return (
         <form className="create-bird-form" onSubmit={handleSubmit}>
-            <h3>New Bird Entry</h3>
             <label>Bird Name:</label>
             <input
                 type="text"
