@@ -17,8 +17,9 @@ const Login = () => {
         
         <div className="background-container">
         <form className="login" onSubmit={handleSubmit}>
-            <h3>Welcome back!</h3>
-            <h4>Sign in to Birdr</h4>
+            <h3>Welcome back to Birdr.</h3>
+            <p> Your comprehensive bird log and North American/European database! Sign into your account for full access.</p>
+            <h4>Sign into your account for full access.</h4>
             <div className='login-form-labels'>
             <label>Email </label>
             <input
@@ -39,6 +40,9 @@ const Login = () => {
         </form>
         <div className="login-link">
                 <h4>Don't have a Birdr account? <Link to="/signup">Create an account</Link>.</h4>
+        </div>
+        <div className="login-link">
+                <h4>You can also <Link to="/search">search for bird information in our database</Link> without an account.</h4>
             </div>
         </div>
     )
