@@ -11,9 +11,11 @@ const Library = () => {
     const {birds, dispatch} = useBirdsContext()
     const {user} = useAuthContext()
 
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
+
     useEffect(() => {
         const fetchBirds = async () => {
-            const response = await fetch('api/birds', {
+            const response = await fetch(`${backendUrl}/user/api/birds`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
