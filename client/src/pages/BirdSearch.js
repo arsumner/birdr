@@ -37,18 +37,18 @@ const SearchBirds = () => {
         database that contains information for over 1000 different avian species. For more information about this
         database check out our site links at the bottom of the page. 
       </p>
-      <h4>Bird Information Categories</h4>
-      <p>Scientific Name: The Latin grammatical form of a species' name. In taxonomy, the scientific name, also
+      <h3>Bird Information Categories</h3>
+      <p><b>Scientific Name:</b> The Latin grammatical form of a species' name. In taxonomy, the scientific name, also
         known as the binomial nomenclature, gives each living organism two names - the genus and species name.
       </p>
-      <p>Order: One of the eight major heirarchical taxonomic ranks classified between class and family. More than half
+      <p><b>Order:</b> One of the eight major heirarchical taxonomic ranks classified between class and family. More than half
         of all birds belong to the order Passeriformes.
       </p>
-      <p>Family: One of the eight major heirarchical taxonomic ranks classified between order and family.</p>
-      <p>Status: The conservation status of a species.</p>
-      <p>Region: Geographial area where the species is found.</p>
-      <p>Length: The average size of the bird from the tip of its beak to the end of its tail.</p>
-      <p>Wingspan: The distance from the tip of one wing to the tip of the other when the wings are fully extended.</p>
+      <p><b>Family:</b> One of the eight major heirarchical taxonomic ranks classified between order and family.</p>
+      <p><b>Status:</b> The conservation status of a species.</p>
+      <p><b>Region:</b> Geographial area where the species is found.</p>
+      <p><b>Length: </b>The average size of the bird from the tip of its beak to the end of its tail.</p>
+      <p><b>Wingspan: </b>The distance from the tip of one wing to the tip of the other when the wings are fully extended.</p>
 
       <input 
         type="text" 
