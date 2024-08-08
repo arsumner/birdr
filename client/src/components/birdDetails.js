@@ -32,7 +32,7 @@ const BirdDetails = ({bird}) => {
         if (!user) {
             return
         }
-        navigate(`${backendUrl}/api/update/${bird._id}`)
+        navigate(`/update/${bird._id}`)
     }
     
 

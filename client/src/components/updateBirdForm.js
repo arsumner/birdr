@@ -11,9 +11,7 @@ const UpdateBirdForm = () => {
     const [notes, setNotes] = useState('')
     const [error, setError] = useState(null)
     const navigate = useNavigate()
-
     const backendUrl = process.env.REACT_APP_BACKEND_URL
-
     useEffect(() => {
         const fetchBird = async () => {
             if (!user) {
@@ -22,7 +20,7 @@ const UpdateBirdForm = () => {
             }
 
             try {
-                const response = await fetch(`${backendUrl}/user/api/birds/${id}`, {
+                const response = await fetch(`${backendUrl}/api/birds/${id}`, {
                     headers: {
                         'Authorization': `Bearer ${user.token}`
                     }
