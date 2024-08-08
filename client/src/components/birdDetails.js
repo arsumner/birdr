@@ -13,7 +13,10 @@ const BirdDetails = ({bird}) => {
         if (!user) {
             return
         }
-        const response = await fetch('/api/birds/' + bird._id, {
+
+        const backendUrl = process.env.REACT_APP_BACKEND_URL
+
+        const response = await fetch(`${backendUrl}/user/api/birds` + bird._id, {
             method: "DELETE",
             headers: {
                 'Authorization': `Bearer ${user.token}`
