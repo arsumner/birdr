@@ -12,6 +12,7 @@ const UpdateBirdForm = () => {
     const [error, setError] = useState(null)
     const navigate = useNavigate()
     const backendUrl = process.env.REACT_APP_BACKEND_URL
+
     useEffect(() => {
         const fetchBird = async () => {
             if (!user) {
@@ -52,7 +53,7 @@ const UpdateBirdForm = () => {
 
         console.log('User token:', user.token)
         try {
-            const response = await fetch(`/api/birds/${id}`, {
+            const response = await fetch(`${backendUrl}/api/birds/${id}`, {
                 method: 'PATCH',
                 body: JSON.stringify({ count, notes }),
                 headers: {
