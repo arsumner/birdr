@@ -8,15 +8,14 @@ const BirdDetails = ({bird}) => {
     const { dispatch } = useBirdsContext()
     const navigate = useNavigate()
     const { user } = useAuthContext()
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
 
     const handleDeleteClick = async () => {
         if (!user) {
             return
         }
 
-        const backendUrl = process.env.REACT_APP_BACKEND_URL
-
-        const response = await fetch(`${backendUrl}/api/birds/${bird._id}` + bird._id, {
+        const response = await fetch(`${backendUrl}/api/birds/${bird._id}`, {
             method: "DELETE",
             headers: {
                 'Authorization': `Bearer ${user.token}`
@@ -33,7 +32,7 @@ const BirdDetails = ({bird}) => {
         if (!user) {
             return
         }
-        navigate(`/update/${bird._id}`)
+        navigate(`${backendUrl}/api/update/${bird._id}`)
     }
     
 
