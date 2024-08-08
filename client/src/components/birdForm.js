@@ -25,7 +25,7 @@ const BirdForm = () => {
 
         const backendUrl = process.env.REACT_APP_BACKEND_URL
 
-        const response = await fetch(`${backendUrl}/user/api/birds`, {
+        const response = await fetch(`${backendUrl}/api/birds`, {
             method: 'POST',
             body: JSON.stringify(bird),
             headers: {
