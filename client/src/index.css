@@ -418,7 +418,7 @@ header a {
 
 .update-form {
     max-width: 500px;
-    margin: 150px auto 20px;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #090101;
     border-radius: 10px;
@@ -427,7 +427,6 @@ header a {
     text-align: left;
     font-family: 'Arial', sans-serif;
     position: relative;
-    transform: rotate(1deg); 
 }
 
 
