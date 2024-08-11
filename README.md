@@ -40,7 +40,6 @@
         <li><a href="#built-with">Technologies Used</a></li>
       </ul>
     </li>
-    <li>
     <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
