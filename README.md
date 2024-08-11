@@ -9,8 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/arsumner/birdr">
-  <a href="">
-    <img src="images/birdr.jpg" alt="Logo" width="100" height="80">
+    ![birdr copy](https://github.com/user-attachments/assets/4bacd713-ab27-4520-b746-21cd50199676)
   </a>
 
 <h3 align="center">Birdr</h3>
@@ -197,15 +196,6 @@ Steps to Contribute:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 <!-- API Reference -->
 ## API Reference
 
@@ -242,6 +232,7 @@ LinkedIn: [https://www.linkedin.com/in/amandarsumner/]
 * [Nuthatch API](https://nuthatch.lastelm.software/) - For generously providing the bird data used in this application.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
