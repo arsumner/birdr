@@ -148,9 +148,11 @@ Ensure you have npm and node.js installed to run the project.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-## Account sign up and log in options to allow full access to the site.
-## Search for bird information provided by the Nutchatch database through the search feature (does not require user authentication).
-## Full Create, Read, Update and Delete (CRUD) on authenticated users' personal bird logbook.
+Account sign up and log in options to allow full access to the site.
+
+Search for bird information provided by the Nutchatch database through the search feature (does not require user authentication).
+
+Full Create, Read, Update and Delete (CRUD) on authenticated users' personal bird logbook.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
