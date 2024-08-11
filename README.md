@@ -5,9 +5,8 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Stargazers][stars-shield]][stars-url]
 
 
 <!-- PROJECT LOGO -->
@@ -154,9 +153,11 @@ Ensure you have npm and node.js installed to run the project.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+```sh
 Account sign up and log in options to allow full access to the site.
 Search for bird information provided by the Nutchatch database through the search feature (does not require user authentication).
 Full Create, Read, Update and Delete (CRUD) on authenticated users' personal bird logbook.
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,6 +165,7 @@ Full Create, Read, Update and Delete (CRUD) on authenticated users' personal bir
 <!-- FOLDER STRUCTURE -->
 ## FOLDER STRUCTURE
 
+```sh
 birdr/
 ├── client/                   # React client application
 │   ├── public/               # Public files
@@ -181,6 +183,7 @@ birdr/
     ├── controllers/          # Request handlers
     ├── middleware/           # Authenticate requests through JWT
     └── server.js             # Main server file
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -249,11 +252,11 @@ LinkedIn: [https://www.linkedin.com/in/amandarsumner/]
 <!-- MARKDOWN LINKS & IMAGES -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/amandarsumner/
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
+[contributors-shield]: https://img.shields.io/github/contributors/amandarsumner/birdr.svg?style=for-the-badge
+[contributors-url]: https://github.com/amandarsumner/birdr/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/amandarsumner/birdr.svg?style=for-the-badge
+[forks-url]: https://github.com/amandarsumner/birdr/network/members
+[stars-shield]: https://img.shields.io/github/stars/amandarsumner/birdr.svg?style=for-the-badge
+[stars-url]: https://github.com/amandarsumner/birdr/stargazers
+[issues-shield]: https://img.shields.io/github/issues/amandarsumner/birdr.svg?style=for-the-badge
+[issues-url]: https://github.com/amandarsumnerbirdr/issues
